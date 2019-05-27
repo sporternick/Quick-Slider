@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Assets\scripts\canvasscript.cs" />
     <Compile Include="Assets\scripts\mainMenu.cs" />
+    <Compile Include="Assets\scripts\Quickslider.cs" />
     <Compile Include="Assets\scripts\textscript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
