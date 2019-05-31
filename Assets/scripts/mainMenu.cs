@@ -33,6 +33,7 @@ public class mainMenu : MonoBehaviour
         setGameControl();
         setGameMode();
     }
+
     
     public void setThumbSide()
     {
@@ -50,8 +51,15 @@ public class mainMenu : MonoBehaviour
     }
     
     public void StartGame()
-    {       
-        SceneManager.LoadScene("game");
+    {
+        if (gameControlToggleScreen.isOn)
+        {
+            SceneManager.LoadScene("normalslider");
+        }
+        else
+        {
+            SceneManager.LoadScene("circleslider");
+        }
     }
     
    
