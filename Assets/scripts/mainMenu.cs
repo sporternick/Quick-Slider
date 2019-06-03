@@ -17,6 +17,9 @@ public class mainMenu : MonoBehaviour
     private Toggle thumbSideToggle;
     private GameController _gameController;
 
+    
+    
+    
 
     void Start()
     {

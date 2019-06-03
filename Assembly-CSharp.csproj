@@ -55,9 +55,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\AccurateRound.cs" />
     <Compile Include="Assets\scripts\CanvasScript.cs" />
     <Compile Include="Assets\scripts\GameController.cs" />
     <Compile Include="Assets\scripts\circleslider.cs" />
+    <Compile Include="Assets\scripts\Level.cs" />
+    <Compile Include="Assets\scripts\QuickRound.cs" />
+    <Compile Include="Assets\scripts\Round.cs" />
     <Compile Include="Assets\scripts\mainMenu.cs" />
     <Compile Include="Assets\scripts\textscript.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
