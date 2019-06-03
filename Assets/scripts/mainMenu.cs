@@ -40,17 +40,17 @@ public class mainMenu : MonoBehaviour
     
     public void setThumbSide()
     {
-        _gameController.thumbside = thumbSideToggle.isOn ? ThumbSide.Left : ThumbSide.Right;
+        _gameController.ThumbSide = thumbSideToggle.isOn ? ThumbSide.Left : ThumbSide.Right;
     }
     
     public void setGameMode()
     {
-        _gameController.gamemode = gameModeToggleSpeed.isOn ? GameMode.Speed : GameMode.Accuracy;
+        _gameController.Mode = gameModeToggleSpeed.isOn ? Mode.Accuracy : Mode.Speed;
     }
     
     public void setGameControl()
     {
-        _gameController.gamecontrol = gameControlToggleScreen.isOn ? GameControl.Screen : GameControl.Radial;
+        _gameController.SliderMode = gameControlToggleScreen.isOn ? sliderMode.Vertical : sliderMode.Radial;
     }
     
     public void StartGame()

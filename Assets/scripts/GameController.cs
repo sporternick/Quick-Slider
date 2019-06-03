@@ -16,7 +16,7 @@ public enum Mode
     Accuracy //reach the closest value in a defined time, score based on accuracy
 }
 
-public enum Slider
+public enum sliderMode
 {
     Vertical, //regular slider using the whole screen as input
     Radial //radial slider on the thumb side
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
 {
     //game settings
     public Mode Mode ;
-    public Slider Slider ;
+    public sliderMode SliderMode ;
     public ThumbSide ThumbSide ;
     public Difficulty Difficulty ;
 

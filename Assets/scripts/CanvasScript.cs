@@ -55,11 +55,11 @@ public class CanvasScript : MonoBehaviour, IPointerUpHandler
     public void check()
     {
         Debug.Log("onpointerup, slider value :" + slider.value);
-        _gameController.CheckValue((int) slider.value); //send the slider value to the game controller to check if its correct
-        if (_gameController.LevelCompleted)
-        {
+        //_gameController.CheckValue((int) slider.value); //send the slider value to the game controller to check if its correct
+        //if (_gameController.LevelCompleted)
+        //{
             
-        }
+        //}
     }
 
     
