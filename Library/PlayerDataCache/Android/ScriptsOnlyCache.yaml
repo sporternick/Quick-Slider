@@ -5,7 +5,6 @@ ScriptsOnlyBuild:
     - GameController
     - circleslider
     - mainMenu
-    - textscript
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -55,15 +54,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 16520}
+      Script: {instanceID: 13016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -104,29 +103,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 12110}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12336}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 12358}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12616}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12798}
     - Class: 114
-      Script: {instanceID: 13004}
+      Script: {instanceID: 13016}
     - Class: 114
-      Script: {instanceID: 13022}
+      Script: {instanceID: 13034}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 13066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -163,23 +162,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 11824}
+      Script: {instanceID: 12346}
     - Class: 114
-      Script: {instanceID: 12336}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 13016}
     - Class: 114
-      Script: {instanceID: 13004}
-    - Class: 114
-      Script: {instanceID: 13040}
+      Script: {instanceID: 13052}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -263,7 +260,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4cf0bb97da83ecc5ee50b5a65b1dc839
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: mainMenu
@@ -276,12 +273,6 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: textscript
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
@@ -291,6 +282,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 4934f92a75dcb630d79930f9bf53472d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: normalsliderUI
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -407,7 +404,13 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 59f224a7f22c5a4f286a8bc22663f774
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CSVmaker
+  - hash:
+      serializedVersion: 2
+      Hash: 70a3630e61182a4fcf8b866a89b4bf38
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanvasScript
@@ -447,6 +450,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 1eaac5e391f83c7eacf86b7965d1e11c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: circleslider
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -539,7 +548,7 @@ ScriptsOnlyBuild:
     className: AudioTrack
   - hash:
       serializedVersion: 2
-      Hash: dd16d93ac0707cc109d94ec338d7505c
+      Hash: c48cb364b60696f7f62f7f618b3af018
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -657,12 +666,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 1eaac5e391f83c7eacf86b7965d1e11c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: circleslider
   platform: 13
   scenePathNames:
   - Assets/Scenes/main menu.unity

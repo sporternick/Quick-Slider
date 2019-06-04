@@ -8,7 +8,7 @@ public class Level
     public bool LevelCompleted = false;
     public int NbRounds = 10 ; //number of rounds to complete a level of the game
 
-    private readonly Mode _mode;
+    public readonly Mode _mode;
     private readonly Difficulty _difficulty;
 
 
@@ -30,7 +30,7 @@ public class Level
                 (Round) new QuickRound(RoundNumber, (int) _difficulty) ;
     }
 
-    private void NextRound(){
+    public void NextRound(){
         Rounds.Add(CurrentRound);
         RoundNumber++;
         CurrentRound = NewRound();

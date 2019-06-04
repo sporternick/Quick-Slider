@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 
 public enum Mode
 {
-    Speed, //reach the goal value as quick as possible, score based on time
+    Speedy, //reach the goal value as quick as possible, score based on time
     Accuracy //reach the closest value in a defined time, score based on accuracy
 }
 
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
     public Difficulty Difficulty ;
 
 
-    protected Level Level;
+    public Level Level;
        
     void Start()
     {

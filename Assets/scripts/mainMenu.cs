@@ -15,7 +15,7 @@ public class mainMenu : MonoBehaviour
     private Toggle gameModeToggleSpeed;
     private Toggle gameControlToggleScreen;
     private Toggle thumbSideToggle;
-    private GameController _gameController;
+    public GameController _gameController;
 
     
     
@@ -23,8 +23,6 @@ public class mainMenu : MonoBehaviour
 
     void Start()
     {
-        //get the game controller
-        _gameController = GameObject.Find("gameController").GetComponent<GameController>();
         
         //get the menu controls
         thumbSideToggle = GameObject.Find("ThumbSideToggle").GetComponent<Toggle>();
@@ -45,7 +43,7 @@ public class mainMenu : MonoBehaviour
     
     public void setGameMode()
     {
-        _gameController.Mode = gameModeToggleSpeed.isOn ? Mode.Accuracy : Mode.Speed;
+        _gameController.Mode = gameModeToggleSpeed.isOn ? Mode.Accuracy : Mode.Speedy;
     }
     
     public void setGameControl()
