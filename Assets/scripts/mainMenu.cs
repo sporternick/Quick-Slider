@@ -8,49 +8,52 @@ using UnityEngine.UI;
  * mainMenu
  * a class that handles the main menu of the game
  */
-public class MainMenu : MonoBehaviour
+public class mainMenu : MonoBehaviour
 {
-
+    
     //menu toggles
-    private Toggle _gameModeToggleSpeed;
-    private Toggle _gameControlToggleScreen;
-    private Toggle _thumbSideToggle;
-    private GameController _gameController;
+    private Toggle gameModeToggleSpeed;
+    private Toggle gameControlToggleScreen;
+    private Toggle thumbSideToggle;
+    public GameController _gameController;
 
+    
+    
+    
 
     void Start()
     {
-
+        
         //get the menu controls
-        _thumbSideToggle = GameObject.Find("ThumbSideToggle").GetComponent<Toggle>();
-        _gameModeToggleSpeed = GameObject.Find("SpeedyMode").GetComponent<Toggle>();
-        _gameControlToggleScreen = GameObject.Find("ScreenControl").GetComponent<Toggle>();
-
+        thumbSideToggle = GameObject.Find("ThumbSideToggle").GetComponent<Toggle>();
+        gameModeToggleSpeed = GameObject.Find("SpeedyMode").GetComponent<Toggle>();
+        gameControlToggleScreen = GameObject.Find("ScreenControl").GetComponent<Toggle>();
+        
         //set the game settings according to which toggles are enabled by default in Unity (property .isOn)
-        SetThumbSide();
-        SetGameControl();
-        SetGameMode();
+        setThumbSide();
+        setGameControl();
+        setGameMode();
     }
 
-
-    public void SetThumbSide()
+    
+    public void setThumbSide()
     {
-        _gameController.ThumbSide = _thumbSideToggle.isOn ? ThumbSide.Left : ThumbSide.Right;
-    }
-
-    public void SetGameMode()
-    {
-        _gameController.Mode = _gameModeToggleSpeed.isOn ? Mode.Speed : Mode.Accuracy;
+        _gameController.ThumbSide = thumbSideToggle.isOn ? ThumbSide.Left : ThumbSide.Right;
     }
     
-    public void SetGameControl()
+    public void setGameMode()
     {
-        _gameController.Slider = _gameControlToggleScreen.isOn ? Slider.Vertical : Slider.Radial;
+        _gameController.Mode = gameModeToggleSpeed.isOn ? Mode.Accuracy : Mode.Speedy;
     }
-
+    
+    public void setGameControl()
+    {
+        _gameController.SliderMode = gameControlToggleScreen.isOn ? sliderMode.Vertical : sliderMode.Radial;
+    }
+    
     public void StartGame()
     {
-        if (_gameControlToggleScreen.isOn)
+        if (gameControlToggleScreen.isOn)
         {
             SceneManager.LoadScene("normalslider");
         }
@@ -59,6 +62,6 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene("circleslider");
         }
     }
-
-
+    
+   
 }

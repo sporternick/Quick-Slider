@@ -5,38 +5,24 @@
  */
 
 using System.Collections.Generic;
-using UnityEngine;
 
 public class AccurateRound : Round
 {
 	
 	private static List<int> _ttcLevel = new List<int>() {150,90,50}; //TimeToComplete values for level (seconds)
 	
-	private int _ttc; //TimeToComplete : allowed time level based on the difficulty (seconds)
+	private int Ttc; //TimeToComplete : allowed time level (0-2)
 
-	public AccurateRound(int currentRoundIndex, int difficulty) : base (currentRoundIndex)
+	public AccurateRound(int index, int difficulty) : base (index)
 	{
-		_ttc = _ttcLevel[difficulty];
-		Debug.Log("Created AccurateRound, time to complete = " + _ttc);
+		Ttc = _ttcLevel[difficulty];
 	}
 	
-	protected override bool IsValueCorrect(int valueToCheck)
+	protected override bool IsValueCorrect(int playerValue)
 	{
 		int lowerGoal = Goal - 1;
 		int upperGoal = Goal + 1;
-		return valueToCheck >= lowerGoal && valueToCheck <= upperGoal;
+		return playerValue >= lowerGoal && playerValue <= upperGoal;
 	}
-
-	public override void StartRound()
-	{
-		//starting cooldown
-		//starting round cooldown Ttc
-		//after Ttc, freeze and collect value
-		//complete
-	}
-
-	public override string GetInstructions()
-	{
-		return "Get as close as possible to the value in a limited time!";
-	}
+	
 }
