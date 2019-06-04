@@ -48,12 +48,11 @@ public class GameController : MonoBehaviour
     public ThumbSide ThumbSide ;
     public Difficulty Difficulty ;
 
-
     public Level Level;
-       
+
     void Start()
     {
-        Level = new Level(Mode, Difficulty);
+        Debug.Log("Started Game Controller");
     }
 
     void Awake()
@@ -61,5 +60,38 @@ public class GameController : MonoBehaviour
         DontDestroyOnLoad(gameObject); //don't destroy game controller between scenes
     }
 
-   
+    public void StartLevel()
+    {
+        Debug.Log("Creation of a new level...");
+        Level = new Level(Mode, Difficulty);
+        Level.InitLevel();
+        Debug.Log(Level.ToString());
+    }
+
+    public int GetRoundGoal()
+    {
+        return Level.CurrentRound.Goal;
+    }
+
+    public int GetRoundIndex()
+    {
+        return Level.CurrentRound.Index;
+    }
+
+    public int GetNbRounds()
+    {
+        return Level.GetNbRounds();
+    }
+
+    public string GetRoundInstructions()
+    {
+        return Level.CurrentRound.GetInstructions();
+    }
+
+    public void QuitLevel()
+    {
+        Level = null;
+        SceneManager.LoadScene("menu");
+    }
+
 }
