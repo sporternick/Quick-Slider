@@ -10,15 +10,15 @@ using TMPro;
 using Random = UnityEngine.Random;
 
 
-public enum Mode
+public enum GameMode
 {
-    Speedy, //reach the goal value as quick as possible, score based on time
+    Speed, //reach the goal value as quick as possible, score based on time
     Accuracy //reach the closest value in a defined time, score based on accuracy
 }
 
-public enum sliderMode
+public enum GameControl
 {
-    Vertical, //regular slider using the whole screen as input
+    Screen, //regular slider using the whole screen as input
     Radial //radial slider on the thumb side
 }
 
@@ -26,13 +26,6 @@ public enum ThumbSide
 {
     Left, //thumb on the left side of the screen = left hand
     Right //opposite, obviously == default
-}
-
-public enum Difficulty
-{
-    Easy,
-    Medium,
-    Hard
 }
 
 
@@ -43,23 +36,31 @@ public enum Difficulty
 public class GameController : MonoBehaviour
 {
     //game settings
-    public Mode Mode ;
-    public sliderMode SliderMode ;
-    public ThumbSide ThumbSide ;
-    public Difficulty Difficulty ;
+    public GameMode gamemode ;
+    public GameControl gamecontrol ;
+    public ThumbSide thumbside ;
+    public int Level ;
+    public int goalValue ;
+    public bool levelCompleted = false;
 
-
-    public Level Level;
-       
     void Start()
     {
-        Level = new Level(Mode, Difficulty);
+        Level = 1;
+        goalValue = Random.Range(0, 100);
     }
 
     void Awake()
     {
         DontDestroyOnLoad(gameObject); //don't destroy game controller between scenes
     }
+    
+    public void CheckValue(int value)
+    {
+        Debug.Log("checking value : " + value);
 
-   
+        levelCompleted = value == goalValue; //level is complete if the user value equals the goal
+
+    }
+    
+        
 }

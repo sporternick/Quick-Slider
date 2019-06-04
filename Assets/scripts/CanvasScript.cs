@@ -1,51 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
-using Slider = UnityEngine.UI.Slider;
-using UnityEngine.UI;
-using Image = UnityEngine.UI.Image;
 
 public class CanvasScript : MonoBehaviour, IPointerUpHandler
 {
     
-    public TextMeshProUGUI goal, levelValue, gameModeValue;
-
-    public Image background;
+    public TextMeshProUGUI goal, current, levelValue, gameModeValue;
     
     public GameController _gameController ;
 
-    public Level level;
     public Slider slider;
-
-    private CSVmaker dataSaver = new CSVmaker();
     
 
     void Start()
     {
+        //get the game controller
         _gameController = GameObject.Find("gameController").GetComponent<GameController>();
-        level  = _gameController.Level;
-
-
-        levelValue.text = level.RoundNumber.ToString();
-        gameModeValue.text = _gameController.Mode.ToString();
-
-       
-        goal.text = "Reach " + level.CurrentRound.Goal.ToString(); 
         
-       
-     
-        background = GetComponentInChildren<Image>();
-        background.color = UnityEngine.Color.grey;
-        dataSaver.Init();
+        //get the slider
+        slider = GetComponentInChildren<Slider>();
+        
+        //set the UI variables according to the game controller
+        levelValue = GameObject.Find("level").GetComponent<TextMeshProUGUI>();
+        levelValue.text = _gameController.Level.ToString();
+        
+        gameModeValue = GameObject.Find("mode").GetComponent<TextMeshProUGUI>();
+        gameModeValue.text = _gameController.gamemode.ToString();
 
-    }
-    void Update()
-    {
-        goal.text = "Reach " + level.CurrentRound.Goal.ToString();
-        levelValue.text = level.RoundNumber.ToString();
+        goal = GameObject.Find("goaltxt").GetComponent<TextMeshProUGUI>();
+        goal.text = "Reach " + _gameController.goalValue.ToString();
+        
+        current = GameObject.Find("currenttxt").GetComponent<TextMeshProUGUI>();
+        current.text = slider.value.ToString();
+        current.color = new Color(158, 158, 158, 0.3f);
+
     }
     
     public void OnPointerUp(PointerEventData eventData)
@@ -55,15 +46,16 @@ public class CanvasScript : MonoBehaviour, IPointerUpHandler
 
     public void check()
     {
-        dataSaver.addEntry(level.CurrentRound.Goal, (int)slider.value);
-        if (level.RoundNumber % 15 == 0)
-        {
-            dataSaver.SavetoCSV();
-        }
         Debug.Log("onpointerup, slider value :" + slider.value);
-        level.NextRound();
-       
+        _gameController.CheckValue((int) slider.value); //send the slider value to the game controller to check if its correct
+        if (_gameController.levelCompleted)
+        {
+            current.color = new Color(0, 255, 0, 0.3f);
+        }
     }
 
+    
+    
+    
     
 }
