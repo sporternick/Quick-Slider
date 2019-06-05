@@ -15,13 +15,14 @@ public class mainMenu : MonoBehaviour
     private Toggle gameModeToggleSpeed;
     private Toggle gameControlToggleScreen;
     private Toggle thumbSideToggle;
-    private GameController _gameController;
+    public GameController _gameController;
 
+    
+    
+    
 
     void Start()
     {
-        //get the game controller
-        _gameController = GameObject.Find("gameController").GetComponent<GameController>();
         
         //get the menu controls
         thumbSideToggle = GameObject.Find("ThumbSideToggle").GetComponent<Toggle>();
@@ -33,25 +34,33 @@ public class mainMenu : MonoBehaviour
         setGameControl();
         setGameMode();
     }
+
     
     public void setThumbSide()
     {
-        _gameController.thumbside = thumbSideToggle.isOn ? ThumbSide.Left : ThumbSide.Right;
+        _gameController.ThumbSide = thumbSideToggle.isOn ? ThumbSide.Left : ThumbSide.Right;
     }
     
     public void setGameMode()
     {
-        _gameController.gamemode = gameModeToggleSpeed.isOn ? GameMode.Speed : GameMode.Accuracy;
+        _gameController.Mode = gameModeToggleSpeed.isOn ? Mode.Accuracy : Mode.Speedy;
     }
     
     public void setGameControl()
     {
-        _gameController.gamecontrol = gameControlToggleScreen.isOn ? GameControl.Screen : GameControl.Radial;
+        _gameController.SliderMode = gameControlToggleScreen.isOn ? sliderMode.Vertical : sliderMode.Radial;
     }
     
     public void StartGame()
-    {       
-        SceneManager.LoadScene("game");
+    {
+        if (gameControlToggleScreen.isOn)
+        {
+            SceneManager.LoadScene("normalslider");
+        }
+        else
+        {
+            SceneManager.LoadScene("circleslider");
+        }
     }
     
    
