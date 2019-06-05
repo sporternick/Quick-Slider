@@ -299,10 +299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dd1e3cc7d341f1861a54280f2efb12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamemode: 0
-  gamecontrol: 0
-  thumbside: 0
-  Level: 0
+  Mode: 1
+  SliderMode: 0
+  ThumbSide: 1
+  Difficulty: 0
 --- !u!4 &91151858
 Transform:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &224282571
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aca60d126205e04dac56a0b1d9d8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameController: {fileID: 91151857}
 --- !u!1 &322539067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1515,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &1012417701
 GameObject:
   m_ObjectHideFlags: 0

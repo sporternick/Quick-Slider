@@ -11,6 +11,8 @@
           <e p="canvasscript.cs" t="Include" />
           <e p="gameController.cs" t="Include" />
           <e p="mainMenu.cs" t="Include" />
+          <e p="QuickRound.cs" t="Include" />
+          <e p="Round.cs" t="Include" />
           <e p="textscript.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
