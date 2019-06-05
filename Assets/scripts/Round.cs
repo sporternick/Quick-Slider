@@ -13,17 +13,26 @@ public abstract class Round
 	public int Goal ;
 
 
-	protected Round (int index) {
-		Index = index;
+	protected Round (int currentRoundIndex) {
+		Index = currentRoundIndex;
 		Goal = Random.Range(0, 100);
 	}
 
-	protected abstract bool IsValueCorrect (int playerValue);
+	public void CheckValue(int valueToCheck)
+	{
+		if (IsValueCorrect(valueToCheck)) CompleteRound();
+	}
 
 	public void CompleteRound()
 	{
+		Debug.Log("Round is complete!");
 		Completed = true;
-	
+		//freeze slider
 	}
+
+	
+	protected abstract bool IsValueCorrect (int valueToCheck);
+	public abstract void StartRound();
+	public abstract string GetInstructions();
 
 }
