@@ -5,18 +5,17 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class normalsliderUI : MonoBehaviour
+public class textscript : MonoBehaviour
 {
 
-    public Level level;
-    public TextMeshProUGUI leveltxt, modetxt, goaltxt;
-    
+    int value;
+    TextMeshProUGUI objective;
 
     // Start is called before the first frame update
     void Start()
     {
-        leveltxt.text = level.CurrentRound.ToString();
-        modetxt.text = level._mode.ToString();
+        objective = GetComponent<TextMeshProUGUI>();
+      
     }
 
     // Update is called once per frame
@@ -25,5 +24,8 @@ public class normalsliderUI : MonoBehaviour
        
     }
    
-   
+    public void cur(float current )
+    {
+        objective.text = current.ToString();
+    }
 }
