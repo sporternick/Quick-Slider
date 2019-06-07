@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Circleslider.unity
     guid: 5f5555884803e28479259983ff20c8ce
+  - enabled: 1
+    path: Assets/Scenes/leftcircleslider.unity
+    guid: 2d45b65764f1bdb43865460a8bc9525c
   m_configObjects: {}

@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - CanvasScript
     - GameController
     - circleslider
+    - cscanvas
+    - leftcscanvas
     - mainMenu
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -56,20 +58,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 12066}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12980}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 12550}
+    - Class: 114
+      Script: {instanceID: 12628}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13018}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/leftcircleslider.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11082}
+    - Class: 114
+      Script: {instanceID: 11728}
+    - Class: 114
+      Script: {instanceID: 12068}
+    - Class: 114
+      Script: {instanceID: 12348}
+    - Class: 114
+      Script: {instanceID: 12550}
+    - Class: 114
+      Script: {instanceID: 12628}
+    - Class: 114
+      Script: {instanceID: 12982}
+    - Class: 114
+      Script: {instanceID: 13018}
+    - Class: 114
+      Script: {instanceID: 24898}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
@@ -107,25 +172,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 12360}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 12616}
+      Script: {instanceID: 12618}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12628}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13034}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13066}
+      Script: {instanceID: 13068}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -166,17 +231,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11830}
     - Class: 114
-      Script: {instanceID: 12346}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 12626}
+      Script: {instanceID: 12628}
     - Class: 114
-      Script: {instanceID: 12980}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 13016}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13052}
+      Script: {instanceID: 13054}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -416,6 +481,12 @@ ScriptsOnlyBuild:
     className: CanvasScript
   - hash:
       serializedVersion: 2
+      Hash: 7d75244f17cd79045d23914c2eab8241
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: cscanvas
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -452,7 +523,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 1eaac5e391f83c7eacf86b7965d1e11c
+      Hash: 106f94d4e9d15a7bc223e4c5c9b4b704
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: circleslider
@@ -666,9 +737,16 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 7d75244f17cd79045d23914c2eab8241
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: leftcscanvas
   platform: 13
   scenePathNames:
   - Assets/Scenes/main menu.unity
   - Assets/Scenes/normalslider.unity
   - Assets/Scenes/Circleslider.unity
+  - Assets/Scenes/leftcircleslider.unity
   playerPath: D:/Documenten/Desktop/Documents/Universiteit Utrecht/Quick Slider/quickslider.apk

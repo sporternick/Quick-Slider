@@ -46,7 +46,9 @@ public class CanvasScript : MonoBehaviour, IPointerUpHandler
     {
         goal.text = "Reach " + level.CurrentRound.Goal.ToString();
         levelValue.text = level.RoundNumber.ToString();
+        dataSaver.addEntry(level.CurrentRound.Goal, (int)slider.value, "screen update");
     }
+    
     
     public void OnPointerUp(PointerEventData eventData)
     {
@@ -55,7 +57,7 @@ public class CanvasScript : MonoBehaviour, IPointerUpHandler
 
     public void check()
     {
-        dataSaver.addEntry(level.CurrentRound.Goal, (int)slider.value);
+        dataSaver.addEntry(level.CurrentRound.Goal, (int)slider.value,"release of screen");
         if (level.RoundNumber % 15 == 0)
         {
             dataSaver.SavetoCSV();

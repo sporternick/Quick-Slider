@@ -10,21 +10,28 @@ public class CSVmaker  : MonoBehaviour
 {
     
     private List<string[]> rowData = new List<string[]>();
-    
+    private float time;
 
     public void Init()
     {
-        string[] rowDataTemp = new string[2];
-        rowDataTemp[0] = "goal";
-        rowDataTemp[1] = "guess";
+        string[] rowDataTemp = new string[3];
+        rowDataTemp[0] = "Goal";
+        rowDataTemp[1] = "Guess";
+        rowDataTemp[2] = "Type";
+        rowDataTemp[2] = "Time";
         rowData.Add(rowDataTemp);
+        time = 0;
     }
 
-    public void addEntry(int goal, int guess)
+    public void addEntry(int goal, int guess, string type)
     {
-        string[] newRow = new string[2];
+        time += Time.deltaTime;
+        string[] newRow = new string[4];
         newRow[0] = goal.ToString();
         newRow[1] = guess.ToString();
+        newRow[2] = type;
+
+        newRow[3] = time.ToString();
         rowData.Add(newRow);
     }
 

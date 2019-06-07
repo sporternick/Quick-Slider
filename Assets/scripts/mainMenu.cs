@@ -59,7 +59,15 @@ public class mainMenu : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("circleslider");
+            if (thumbSideToggle.isOn)
+            {
+                SceneManager.LoadScene("leftcircleslider");
+            }
+            else
+            {
+                SceneManager.LoadScene("circleslider");
+            }
+            
         }
     }
     
