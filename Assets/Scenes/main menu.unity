@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 211255822}
   - component: {fileID: 211255823}
   m_Layer: 5
-  m_Name: ScreenControl
+  m_Name: VerticalControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,21 +549,10 @@ MonoBehaviour:
   m_Group: {fileID: 2057145413}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 224282576}
-        m_MethodName: setGameControl
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &224282571
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aca60d126205e04dac56a0b1d9d8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 91151857}
+  _gameController: {fileID: 0}
 --- !u!1 &322539067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,18 +1318,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 224282576}
-        m_MethodName: setThumbSide
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_IsOn: 0
@@ -1501,21 +1479,10 @@ MonoBehaviour:
   m_Group: {fileID: 2057145413}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 224282576}
-        m_MethodName: setGameControl
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1012417701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,18 +1956,7 @@ MonoBehaviour:
   m_Group: {fileID: 376462768}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 224282576}
-        m_MethodName: setGameMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_IsOn: 0
@@ -2061,7 +2017,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Screen
+  m_text: Vertical
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd105c9f0799aa74e9925e6035658adb, type: 2}
   m_sharedMaterial: {fileID: 8241775729174776887, guid: dd105c9f0799aa74e9925e6035658adb,
@@ -2131,7 +2087,7 @@ MonoBehaviour:
   m_margin: {x: 202.68198, y: 0, z: -0.000061035156, w: 0}
   m_textInfo:
     textComponent: {fileID: 1515385727}
-    characterCount: 6
+    characterCount: 8
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3101,18 +3057,7 @@ MonoBehaviour:
   m_Group: {fileID: 376462768}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 224282576}
-        m_MethodName: setGameMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, Unity.ugui, Version=1.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_IsOn: 1

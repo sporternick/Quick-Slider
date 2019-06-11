@@ -10,11 +10,12 @@ public class cscanvas : MonoBehaviour
 {
     public GameController _gameController;
     public TextMeshProUGUI level, mode, currentgoal;
-    public circleslider cir;
-    protected CSVmaker csvmaker = new CSVmaker();
+    public circleslider slider;
+    protected CSVmaker csvmaker ;
     // Start is called before the first frame update
     void Start()
     {
+        csvmaker = new CSVmaker();
         _gameController = GameObject.Find("gameController").GetComponent<GameController>();
         mode.text = _gameController.Mode.ToString();
         csvmaker.Init();
@@ -26,9 +27,8 @@ public class cscanvas : MonoBehaviour
     {
         level.text = _gameController.Level.RoundNumber.ToString();
         currentgoal.text = _gameController.Level.CurrentRound.Goal.ToString();
-        csvmaker.addEntry(_gameController.Level.CurrentRound.Goal, cir.value, "screen update");
+        csvmaker.addEntry(_gameController.Level.CurrentRound.Goal, slider.value, "screen update");
         detect();
-
     }
 
    public virtual void detect()
@@ -42,19 +42,17 @@ public class cscanvas : MonoBehaviour
             float y = touchpos.y;
 
             float degrees = Mathf.Rad2Deg * Mathf.Atan(y / x);
-            cir.Slider.rotation = Quaternion.Euler(0, 0, -degrees);
-            cir.value = Mathf.RoundToInt(cir.max * degrees / 90);
+            slider.Slider.rotation = Quaternion.Euler(0, 0, -degrees);
+            slider.value = Mathf.RoundToInt(slider.max * degrees / 90);
             if (Input.GetTouch(0).phase == TouchPhase.Ended)
             {
-
                 //save update
-                csvmaker.addEntry(_gameController.Level.CurrentRound.Goal, cir.value, "screen release");
+                csvmaker.addEntry(_gameController.Level.CurrentRound.Goal, slider.value, "screen release");
                 _gameController.Level.NextRound();
-                if (_gameController.Level.RoundNumber % 15 == 0)
+                if (_gameController.Level.Completed)
                 {
                     csvmaker.SavetoCSV();
                 }
-
             }
             
 

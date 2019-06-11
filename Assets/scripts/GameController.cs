@@ -16,7 +16,7 @@ public enum Mode
     Accuracy //reach the closest value in a defined time, score based on accuracy
 }
 
-public enum sliderMode
+public enum SliderMode
 {
     Vertical, //regular slider using the whole screen as input
     Radial //radial slider on the thumb side
@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour
 {
     //game settings
     public Mode Mode ;
-    public sliderMode SliderMode ;
+    public SliderMode SliderMode ;
     public ThumbSide ThumbSide ;
     public Difficulty Difficulty ;
 
@@ -53,13 +53,31 @@ public class GameController : MonoBehaviour
        
     void Start()
     {
+        
+    }
+
+    public void StartLevel()
+    {
         Level = new Level(Mode, Difficulty);
     }
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject); //don't destroy game controller between scenes
+        int numControllers = FindObjectsOfType<GameController>().Length;
+        Debug.Log("number of game controllers : " + numControllers);
+        if (numControllers != 1)
+        {
+            Debug.Log("destroying a game controller");
+            Destroy(gameObject);
+        }
+        // if more then one game controller in the scene
+        //destroy ourselves
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        
     }
 
-   
+    
 }

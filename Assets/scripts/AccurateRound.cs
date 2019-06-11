@@ -11,7 +11,7 @@ public class AccurateRound : Round
 	
 	private static List<int> _ttcLevel = new List<int>() {150,90,50}; //TimeToComplete values for level (seconds)
 	
-	private int Ttc; //TimeToComplete : allowed time level (0-2)
+	private int Ttc; //TimeToComplete : allowed time level 
 
 	public AccurateRound(int index, int difficulty) : base (index)
 	{

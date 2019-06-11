@@ -1,18 +1,21 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Level
 {
     public List<Round> Rounds ;
     public int RoundNumber;
     public Round CurrentRound;
-    public bool LevelCompleted = false;
+    public bool Completed = false;
     public int NbRounds = 10 ; //number of rounds to complete a level of the game
 
-    public readonly Mode _mode;
+    private readonly Mode _mode;
     private readonly Difficulty _difficulty;
 
 
     public Level(Mode mode, Difficulty difficulty){
+        
+        Debug.Log("creating level " + mode);
         
         _mode = mode;
         _difficulty = difficulty;
@@ -33,7 +36,15 @@ public class Level
     public void NextRound(){
         Rounds.Add(CurrentRound);
         RoundNumber++;
-        CurrentRound = NewRound();
+        if (RoundNumber > NbRounds)
+        {
+            Completed = true;
+        }
+        else
+        {
+            CurrentRound = NewRound();    
+        }
+        
     }
 
 	

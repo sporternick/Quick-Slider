@@ -16,22 +16,18 @@ public class leftcscanvas : cscanvas
             float y = touchpos.y;
 
             float degrees = Mathf.Rad2Deg * Mathf.Atan(y / x);
-            cir.Slider.rotation = Quaternion.Euler(0, 0, degrees);
-            cir.value = Mathf.RoundToInt(cir.max * degrees / 90);
+            slider.Slider.rotation = Quaternion.Euler(0, 0, degrees);
+            slider.value = Mathf.RoundToInt(slider.max * degrees / 90);
             if (Input.GetTouch(0).phase == TouchPhase.Ended)
             {
-
                 //save update
-                csvmaker.addEntry(_gameController.Level.CurrentRound.Goal, cir.value, "screen release");
+                csvmaker.addEntry(_gameController.Level.CurrentRound.Goal, slider.value, "screen release");
                 _gameController.Level.NextRound();
-                if (_gameController.Level.RoundNumber % 15 == 0)
+                if (_gameController.Level.Completed)
                 {
                     csvmaker.SavetoCSV();
                 }
-
             }
-
-
         }
     }
 
